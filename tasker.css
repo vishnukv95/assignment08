@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  width: 100%;
+
+}
+
+main {
+ 
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  border: 0;
+}
+
+#inputdiv:hover {
+  transform: scale(1.3);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+#inputdiv {
+  padding: 10px;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: 40%;
+}
+
+
+
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus+.input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-field:focus+.input-label+.input-highlight {
+  width: 100%;
+}
+
+#task-list{
+  margin: auto;
+}
+
+.card:hover{
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1) ;
+}
+
+.card{
+  transition: ease-in-out;
+}
+
+.delete-button {
+  transition: all 0.2s ease;
+}
+.delete-button:hover {
+  transform: scale(1.1);
+}
