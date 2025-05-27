@@ -2,8 +2,8 @@ let taskInput = document.getElementById("task-input");
 let inputButton = document.getElementById("input-button");
 let taskList = document.getElementById("task-list");
 let completedTasks = document.getElementById("completed-task-list");
-let activeTaskHeading = document.getElementById('active-task-heading')
-let completedTaskHeading = document.getElementById('complete-task-heading')
+let activeTaskHeading = document.getElementById("active-task-heading")
+let completedTaskHeading = document.getElementById("complete-task-heading")
 
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -77,7 +77,7 @@ function render() {
         );
         localStorage.setItem("tasks", JSON.stringify(tasks));
         completedTaskListrender();
-        renderAllTasks();
+       
         render();
       });
 
@@ -134,8 +134,10 @@ function completedTaskListrender() {
       localStorage.setItem(
         "completedTaskList",
         JSON.stringify(completedTaskList)
+        
       );
       completedTaskListrender();
+      render();
     });
 
     completedTasks.appendChild(card);
